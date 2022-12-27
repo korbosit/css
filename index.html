@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Для всех тегов. кроме тегов form можно применить атрибут disabled, который блокирует любые действия 
+    с полем и делает его визуально тусклым -->
+
+    <!-- Так же для всех интерактивных тегов можно применить tabindex. 
+    Оно определяет порядок перехода при нажатии на клавишу TAB со значениями начиная с 1 -->
+    <form action="#" method="get" enctype="multipart/form-data"></form>
+    <div>
+      <!-- для input type type="text" и для тега textarea можно применить еще атрибут placeholder -->
+      <input
+        placeholder="Введите ваше имя"
+        type="text"
+        name="username"
+        id=""
+        value=""
+      />
+    </div>
+    <div>
+      <input type="password" name="userpass" id="" value="" />
+    </div>
+    <div>
+      <p>
+        <!-- Для групп input с tupe=radio tabindex должен быть одинаковым -->
+        <input disabled checked type="radio" name="beer" id="" value="lager" />
+        Светлое пиво
+      </p>
+      <p><input type="radio" name="beer" id="" value="dark" /> Темное пиво</p>
+    </div>
+    <br />
+    <div>
+      <p>
+        <input type="radio" name="beer2" id="" value="lager" /> Светлое пиво
+      </p>
+      <p>
+        <input checked type="radio" name="beer2" id="" value="dark" /> Темное
+        пиво
+      </p>
+    </div>
+    <div>
+      <p>
+        <input checked type="checkbox" name="car" id="" value="yes" /> Наличие
+        авто
+      </p>
+      <p>
+        <input type="checkbox" name="car2" id="" value="yes" /> Наличие авто 2
+      </p>
+      <p>
+        <input checked type="checkbox" name="car3" id="" value="yes" /> Наличие
+        авто 3
+      </p>
+      <p>
+        <input type="checkbox" name="car4" id="" value="yes" /> Наличие авто 4
+      </p>
+    </div>
+    <br />
+    <div>
+      <p><input checked type="file" name="foto" /></p>
+    </div>
+    <br />
+    <div>
+      <textarea name="text" cols="30" rows="10"></textarea>
+    </div>
+    <br />
+    <div>
+      <!-- multiple в селекте можем указать атрибут -->
+      <select name="color">
+        <option value="red">Красный</option>
+        <option selected value="yellow">Жёлтый</option>
+        <option value="blue">Голубой</option>
+      </select>
+      <br />
+      <br />
+      <div>
+        <!-- Тайп submit - отпрваится вся форма Тайп reset - вся наша форма очистится -->
+        <button type="submit">Отправить</button>
+      </div>
+    </div>
+    <form action="#" method="get">
+        <!-- если выбирвем метод post то код такой <form action="#" method="post" enctype="multipart/form-data"></form> -->
+      <div>
+        <p>Имя</p>
+        <input placeholder="Введите имя" tabindex="1" name="username" type="text"/>
+      </div>
+      <div>
+        <p>Пароль</p>
+        <input placeholder="Введите пароль" tabindex="2" name="userpass" type="password"/>
+      </div>
+      <div>
+        <p>Телефон</p>
+        <input placeholder="Ваш номер телефона" tabindex="3" name="userphone" type="tel"/>
+      </div>
+      <div>
+        <p>Пол</p>
+        <div>
+          <input checked tabindex="4" type="radio" name="gender" value="male" />
+          Мужской
+        </div>
+        <div>
+          <input tabindex="4" type="radio" name="gender" value="female" />
+          Женский
+        </div>
+      </div>
+      <div>
+        <p>Имущество</p>
+        <div>
+          <input checked tabindex="5" type="checkbox" name="bike" value="yes" /> Велик
+        </div>
+        <div>
+          <input tabindex="6" type="checkbox" name="car" value="yes" /> Машина
+        </div>
+        <div>
+          <input disabled tabindex="7" type="checkbox" name="house" value="yes" /> Дом
+        </div>
+        <div>
+            <p>Дополнительная информация</p>
+            <textarea tabindex="8" name="text"></textarea>
+        </div>
+        <div>
+            <p>Прикрепить фото</p>
+            <input tabindex="9" type="file" name="userphoto">
+        </div>
+        <div>
+            <p>Любимый цвет</p>
+            <select tabindex="10" name="color">
+                <option value="red">Красный</option>
+                <option value="green">Зеленый</option>
+                <option selected value="yellow">Жёлтый</option>
+            </select>
+        </div>
+        <div>
+            <p>Действия</p>
+            <button tabindex="11" type="submit">Отправить</button>
+            <button tabindex="12" type="reset">Очистить</button>
+        </div>
+      </div>
+    </form>
+    <br>
+     <form action="#">
+        <div>
+            <label for="first">First input</label>
+            <input id="first" type="range">
+        </div>
+        <div>
+            <p>Текстовое поле</p>
+            <input type="text">
+        </div>
+        <div>
+            <p>Виджет для выбора цвета</p>
+            <input type="color">
+        </div>
+        <div>
+            <p>Поле с датой</p>
+            <input type="date">
+        </div>
+        <div>
+            <p>Дата и время</p>
+            <input type="datetime">
+        </div>
+        <div>
+            <p>Дата и время с локальным временем</p>
+            <input type="datetime-local">
+        </div>
+        <div>
+            <p>Дата и время</p>
+            <input type="datetime">
+        </div>
+        <div>
+            <p>E-mail</p>
+            <input placeholder="Введите ваш email" type="email" disabled>
+        </div>
+        <div>
+            <p>Номер</p>
+            <input type="number">
+        </div>
+        <div>
+            <p>Время</p>
+            <input type="time">
+        </div>
+        <div>
+            <p>УРЛ</p>
+            <input type="url">
+        </div>
+        <div>
+            <p>Месяц</p>
+            <input type="month">
+        </div>
+        <div>
+            <p>Неделя</p>
+            <input type="week">
+        </div>
+        <div>
+            <p>Поле для поиска</p>
+            <input type="search">
+        </div>
+        <div>
+            <p>Second input</p>
+            <label><input type="text">Second input</label>
+        </div>
+        <div>
+            <input name="name" required placeholder="Ваше имя" type="text">
+            <input name="phone" required placeholder="Ваш телефон" type="number">
+            <input name="email" required placeholder="Ваш телефон" type="email">
+            <!-- <input type="submit" value="Заказать консультацию"> -->
+            <button>Заказать консультацию</button>
+            <input type="reset">
+            <button type="reset">Вторая кнопка</button>
+        </div>
+     </form>
+  </body>
+</html>
